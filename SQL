@@ -1,0 +1,28 @@
+SELECT name, population FROM world 
+WHERE population > 50000000;
+
+SELECT name, population FROM world
+WHERE population >= 200000000;
+
+SELECT name, gdp FROM world 
+WHERE gdp > 200000000000;
+
+A QUARTA, QUINTA E SEXTA NÃO FIZ
+
+SELECT name, population, area FROM world
+WHERE area > 3000000 OR population > 250000000;
+
+SELECT name, population, area FROM world
+WHERE (area > 3000000 AND population <= 250000000)
+OR (population > 250000000 AND area <= 3000000);
+
+A NONA NÃO FIZ
+
+SELECT name, ROUND(gdp / population, 3) AS pib_per_capita FROM world
+WHERE gdp >= 1000000000000;
+
+SELECT name, capital FROM world
+WHERE LENGTH(name) = LENGTH(capital);
+
+SELECT name, capital FROM world
+WHERE LEFT(name, 1) = LEFT(capital, 1) AND name <> capital;
